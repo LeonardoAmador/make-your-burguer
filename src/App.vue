@@ -34,6 +34,8 @@
     margin: 50px;
     margin-bottom: 100px;
     min-height: 250px;
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
