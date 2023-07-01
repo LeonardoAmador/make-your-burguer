@@ -1,30 +1,45 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <Navbar :logo="logoSrc" :alt="altName"/>
   <router-view/>
+  <Footer />
 </template>
 
+<script>
+  import Navbar from './components/Navbar.vue';
+  import Footer from './components/Footer.vue';
+
+  export default {
+    components: {
+      Navbar,
+      Footer
+    },
+    data() {
+      return {
+        logoSrc: "/img/logo.png",
+        alt: "Burguer logo"
+      }
+    }
+  }
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+  }
 
-nav {
-  padding: 30px;
-}
+  .mainContainer {
+    margin: 50px;
+    margin-bottom: 100px;
+    min-height: 250px;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #222;
+  }
 </style>
