@@ -79,14 +79,15 @@
   ],
   "burgers": [
     {
-      "name": "Leonardo Amador",
-      "beef": "Maminha",
-      "bread": "Parmesão e Orégano",
+      "name": "Ayxa",
+      "beef": "Alcatra",
+      "bread": "3 Queijos",
       "optionals": [
-        "Bacon"
+        "Pepino",
+        "Cebola roxa"
       ],
-      "status": "Finalizado",
-      "id": 1
+      "status": "Em produção",
+      "id": 2
     }
   ]
 }

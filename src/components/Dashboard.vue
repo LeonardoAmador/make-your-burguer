@@ -1,5 +1,6 @@
 <template>
   <div id="burgerTable">
+    <Message :msg="msg" :isError="isError" v-show="msg" />
     <div class="tableContainer">
       <legend class="tableLegend">Manage your Orders</legend>
       <table>
@@ -45,13 +46,19 @@
 </template>
 
 <script>
+import Message from './Message.vue';
+
 export default {
   name: "Dashboard",
+  components: {
+    Message
+  },
   data() {
     return {
       burgers: null,
       burgerId: null,
       status: [],
+      msg: null
     };
   },
   methods: {
@@ -84,6 +91,10 @@ export default {
 
           const res = await req.json();
 
+          this.msg = `Order removed successfuly`;
+
+          setTimeout(() => this.msg = "", 3000);
+
           this.getOrders()
       } catch (error) {
         console.error('Error:', error);
@@ -101,7 +112,10 @@ export default {
       })
 
       const res = await req.json();
-      console.log(res);
+
+      this.msg = `Order N° ${res.id} was updated to ${res.status}!`;
+
+      setTimeout(() => this.msg = "", 3000);
     }
   },
   mounted() {
