@@ -1,19 +1,6 @@
-# make_your_burguer
+# make-your-burger
 
-## Project setup
+## Project deployment
 ```
-npm install
+make-your-burguer-layk7x46u-leonardoamador.vercel.app
 ```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
